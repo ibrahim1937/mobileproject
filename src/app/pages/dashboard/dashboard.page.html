@@ -1,0 +1,158 @@
+<ion-header >
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button (click)="logout($event)" id="custom">Logout</ion-button>
+    </ion-buttons>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg" padding>
+  <ion-tabs>
+
+    <ion-tab-bar slot="bottom">
+    
+    <ion-tab-button (click)="redirect('monument')">
+    
+    <ion-icon name="home"></ion-icon>
+    
+    <ion-label>Monument</ion-label>
+    
+    </ion-tab-button>
+    
+    <ion-tab-button  (click)="redirect('visite')">
+    
+    <ion-icon name="airplane-outline"></ion-icon>
+    
+    <ion-label>Visite</ion-label>
+    
+    </ion-tab-button>
+    
+    </ion-tab-bar>
+    
+    </ion-tabs>
+  <ion-list>
+    <ion-item style="text-align: center;">
+      <div class="box">
+      <select name="ville" class="test" (change)="onChange($event)" >
+        <option value="">selectionner une ville</option>
+        <option value="AGADIR">AGADIR</option>
+        <option value="AGADIR UNIVERSITAIRE">AGADIR UNIVERSITAIRE</option>
+        <option value="AL HAOUZ">AL HAOUZ    </option>
+        <option value="AL HOCEIMA ">AL HOCEIMA  </option>
+        <option value="AL ISMAILIA">AL ISMAILIA </option>
+        <option value="AOUSSERED">AOUSSERED</option>
+        <option value="ASSA ZAG">ASSA ZAG    </option>
+        <option value="AZILAL">AZILAL      </option>
+        <option value="BEN SLIMANE">BEN SLIMANE </option>
+        <option value="BENI MELLAL">BENI MELLAL </option>
+        <option value="BERKANE">BERKANE</option>
+        <option value="BERRECHID">BERRECHID</option>
+        <option value="BOUJDOUR">BOUJDOUR    </option>
+        <option value="BOUKNADEL">BOUKNADEL</option>
+        <option value="BOULEMANE">BOULEMANE   </option>
+        <option value="CASA-AIN CHOCK HAY HASSANI">CASA-AIN CHOCK HAY HASSANI </option>
+        <option value="CASA-AIN SEBAA HAY MOHAMEDI">CASA-AIN SEBAA HAY MOHAMEDI</option>
+        <option value="CASA-AL FIDA DERB SULTAN ">CASA-AL FIDA DERB SULTAN      </option>
+        <option value="CASA-ANFA SUPERIEUR">CASA-ANFA SUPERIEUR</option>
+        <option value="CASA-BEN MSIK-SIDI OTHMANE">CASA-BEN MSIK-SIDI OTHMANE</option>
+        <option value="CASA-MOULAY RACHID">CASA-MOULAY RACHID</option>
+        <option value="CASA-NOUACER">CASA-NOUACER</option>
+        <option value="CASA-SIDI BERNOUSSI">CASA-SIDI BERNOUSSI</option>
+        <option value="CASABLANCA-ANFA">CASABLANCA-ANFA</option>
+        <option value="CHEFCHAOUEN">CHEFCHAOUEN </option>
+        <option value="CHICHAOUA">CHICHAOUA   </option>
+        <option value="CHTOUKA AIT BAHA">CHTOUKA AIT BAHA</option>
+        <option value="DRIOUCH">DRIOUCH</option>
+        <option value="EL HAJEB ">EL HAJEB    </option>
+        <option value="EL JADIDA ">EL JADIDA   </option>
+        <option value="EL JADIDA UNIVERSITE CHOUAIB D">EL JADIDA UNIVERSITE CHOUAIB D</option>
+        <option value="EL KELAA DES SRAGHNA">EL KELAA DES SRAGHNA     </option>
+        <option value="ERRACHIDIA ">ERRACHIDIA  </option>
+        <option value="ES-SEMARA ">ES-SEMARA   </option>
+        <option value="ESSAOUIRA ">ESSAOUIRA   </option>
+        <option value="FES EL JADID DAR DBIBAGH">FES EL JADID DAR DBIBAGH </option>
+        <option value="FES MEDINA ">FES MEDINA  </option>
+        <option value="FIGUIG">FIGUIG      </option>
+        <option value="FKIH BEN SALEH">FKIH BEN SALEH</option>
+        <option value="GUELMIM">GUELMIM     </option>
+        <option value="GUERCIF">GUERCIF</option>
+        <option value="IFRANE">IFRANE      </option>
+        <option value="INEZGANE AIT MELLOUL">INEZGANE AIT MELLOUL </option>
+        <option value="INTERNATIONAL">INTERNATIONAL</option>
+        <option value="JERADA">JERADA      </option>
+        <option value="KENITRA">KENITRA     </option>
+        <option value="KENITRA UNIVERSITAIRE">KENITRA UNIVERSITAIRE</option>
+        <option value="KHEMISSET">KHEMISSET   </option>
+        <option value="KHENIFRA">KHENIFRA    </option>
+        <option value="KHOURIBGA">KHOURIBGA   </option>
+        <option value="LAAYOUNE">LAAYOUNE    </option>
+        <option value="LARACHE">LARACHE     </option>
+        <option value="MACHOUAR DECASABLANCA">MACHOUAR DECASABLANCA  </option>
+        <option value="MARRAKACH - MENARA">MARRAKACH - MENARA</option>
+        <option value="MARRAKECH GUELIZ-ENNAKHIL">MARRAKECH GUELIZ-ENNAKHIL</option>
+        <option value="MDIQ">MDIQ</option>
+        <option value="MEDIOUNA">MEDIOUNA</option>
+        <option value="MEKNES-EL MENZEH">MEKNES-EL MENZEH</option>
+        <option value="MIDELT">MIDELT</option>
+        <option value="MOHAMMEDIA">MOHAMMEDIA  </option>
+        <option value="NADOR">NADOR       </option>
+        <option value="OUAD EDDAHAB">OUAD EDDAHAB</option>
+        <option value="OUARZAZATE">OUARZAZATE </option>
+        <option value="OUAZZANE">OUAZZANE</option>
+        <option value="OUJDA ANGAD">OUJDA ANGAD</option>
+        <option value="OUJDA ANGAD UNIVERSITAIRE">OUJDA ANGAD UNIVERSITAIRE</option>
+        <option value="PLUSIEURS VILLES">PLUSIEURS VILLES</option>
+        <option value="RABAT AGDAL">RABAT AGDAL</option>
+        <option value="RABAT CENTRE">RABAT CENTRE</option>
+        <option value="RABAT HASSAN">RABAT HASSAN</option>
+        <option value="RABAT IRFANE">RABAT IRFANE</option>
+        <option value="RHAMNA">RHAMNA</option>
+        <option value="SAFI">SAFI        </option>
+        <option value="SALE">SALE        </option>
+        <option value="SEFROU">SEFROU      </option>
+        <option value="SETTAT">SETTAT      </option>
+        <option value="SIDI BERNOUSSI-ZENATTA">SIDI BERNOUSSI-ZENATTA</option>
+        <option value="SIDI IFNI">SIDI IFNI</option>
+        <option value="SIDI KACEM">SIDI KACEM  </option>
+        <option value="SIDI SLIMANE">SIDI SLIMANE</option>
+        <option value="SIDI YAHYA (M)">SIDI YAHYA (M)</option>
+        <option value="SIDI YOUSSEF BEN ALI">SIDI YOUSSEF BEN ALI</option>
+        <option value="SKHIRATE TEMARA ">SKHIRATE TEMARA      </option>
+        <option value="SLE-AL JADIDA">SLE-AL JADIDA</option>
+        <option value="Sidi Bennour">Sidi Bennour</option>
+        <option value="TAN-TAN  ">TAN-TAN     </option>
+        <option value="TANGER-ASSILAH">TANGER-ASSILAH</option>
+        <option value="TANGER-FAHS-ANJRA">TANGER-FAHS-ANJRA</option>
+        <option value="TAOUNATE">TAOUNATE    </option>
+        <option value="TAOURIRT">TAOURIRT</option>
+        <option value="TAROUDANT">TAROUDANT  </option>
+        <option value="TATA">TATA        </option>
+        <option value="TAZA">TAZA        </option>
+        <option value="571">TETOUAN     </option>
+        <option value="TINGHIR">TINGHIR</option>
+        <option value="TIZNIT">TIZNIT      </option>
+        <option value="Youssoufia">Youssoufia</option>
+        <option value="ZAGORA">ZAGORA</option>
+        <option value="ZOUAGHA  MOULAY YACOUB">ZOUAGHA  MOULAY YACOUB</option>
+        
+    </select>
+    </div>
+    </ion-item>
+  </ion-list>
+    
+  
+    <ion-card *ngFor="let monument of monuments; index as i" (click)="rowClicked(monument)" style="text-align: center;">
+      <img src="http://localhost:3000/images/{{ monument.photo }}" height="100px" width="100px" style="border-radius: 50%;">
+      <ion-card-content>
+        <ion-card-title>
+          <b>{{ monument.nom }}</b>
+        </ion-card-title>
+      </ion-card-content>
+      <p><ion-icon name="globe"></ion-icon> <b> à :</b> <b><i> {{ monument.ville }}</i></b></p>
+    </ion-card>
+  
+
+  
+    
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>visite</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout($event)" id="custom">Logout</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-tabs>
+
+    <ion-tab-bar slot="bottom">
+    
+    <ion-tab-button (click)="redirect('monument')">
+    
+    <ion-icon name="home"></ion-icon>
+    
+    <ion-label>Monument</ion-label>
+    
+    </ion-tab-button>
+    
+    <ion-tab-button  (click)="redirect('visite')">
+    
+    <ion-icon name="airplane-outline"></ion-icon>
+    
+    <ion-label>Visite</ion-label>
+    
+    </ion-tab-button>
+    
+    </ion-tab-bar>
+    
+    </ion-tabs>
+
+
+  <ion-button  expand="block" color="danger" (click)="add($event)">Ajouter une visite</ion-button>
+
+  <ion-card *ngFor="let visite of visites; index as i" (click)="rowClicked(visite)" style="text-align: center;">
+      <img src="http://localhost:3000/images/{{ visite.photo }}" height="100px" width="100px" style="border-radius: 50%;">
+      <ion-card-content>
+        <ion-card-title>
+          Visite du monumnet : <b> {{ visite.nom }}</b>
+        </ion-card-title>
+      </ion-card-content>
+      <p><ion-icon name="time"></ion-icon> <b> à :</b> <b><i> {{ visite.created_at.split('T',1) }}</i></b></p>
+    </ion-card>
+
+  
+
+</ion-content>

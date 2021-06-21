@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ajouter Visite</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="ionicForm" (ngSubmit)="onFormSubmit1(ionicForm.value)" enctype="multipart/form-data"> 
+    <ion-item lines="full">
+      <ion-label color="primary">Monument: </ion-label>
+    </ion-item>
+    <ion-item>
+      <select formControlName="monument"  class="test" required>
+        <option selected value="">Choisir un monumnet</option>
+        <option *ngFor="let monument of monuments" value="{{ monument.id }}">{{ monument.nom }}</option>
+      </select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">Image: (optionnel)</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button expand="full">
+        <ion-icon lazy="true" slot="start" name="image"></ion-icon>
+        <input type="file"  class="custom-file-input" id="customFile" name="pic" (change)="onFileSelect1($event)"
+          accept="image/png, image/jpeg">
+          <label class="custom-file-label" for="customFile"></label>
+      </ion-button>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit"  color="danger" expand="block">Enregistrer</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+
